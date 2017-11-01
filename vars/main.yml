@@ -1,0 +1,6 @@
+---
+# vars file for perforce
+perforce_p4v_name: p4v-{{perforce_p4v.release}}
+perforce_p4v_tgz: '{{perforce_p4v_name}}.tgz'
+perforce_p4v_install_dir: '{{perforce_p4v_parent_install_dir}}/{{perforce_p4v_name}}'
+perforce_p4v_link_dir: '{{perforce_p4v_parent_install_dir}}/p4v'

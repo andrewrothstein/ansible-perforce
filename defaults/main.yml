@@ -1,0 +1,19 @@
+---
+# defaults file for perforce
+# https://www.perforce.com/perforce/downloads/linuxlist_drupal.html
+perforce_mirror: https://www.perforce.com/downloads/perforce
+
+# http://www.perforce.com/downloads/perforce/r17.2/bin.linux26x86_64/p4
+# http://www.perforce.com/downloads/perforce/r17.3/bin.linux26x86_64/p4v.tgz
+perforce_distro: bin.linux26x86_64
+perforce_p4:
+  ver: r17.2
+  checksum: sha256:ff4726ddfdd981b045ec25b3b3bf29a6d0d0d4458215af7a79abf36b27651293
+perforce_p4_install_dir: /usr/local/bin
+
+perforce_p4v:
+  ver: r17.3
+  release: '2017.3.1582486'
+  checksum: sha256:1442f67fa95e638743598378c1b8f621feafcb9577c8198c5b63ffdc850e3b4c
+  tgz: p4v.tgz
+perforce_p4v_parent_install_dir: /usr/local
