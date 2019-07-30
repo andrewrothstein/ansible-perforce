@@ -1,0 +1,6 @@
+---
+# vars for MacOSX
+perforce_distro: bin.macosx1010x86_64
+perforce_p4: 
+  ver: r19.1
+  checksum: 082f4000f60899fa0d676bef449680b88f081f215685e5d2d4ffc5f4c3f7aec2
