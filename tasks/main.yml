@@ -48,6 +48,10 @@
     src: '{{perforce_p4v_install_dir}}'
     dest: '{{perforce_p4v_link_dir}}'
     state: link
+- name: ensure profile directory exists
+  file:
+    path: /etc/profile.d
+    state: directory
 - name: add to the default shell path
   become: yes
   become_user: root
