@@ -49,6 +49,8 @@
     dest: '{{perforce_p4v_link_dir}}'
     state: link
 - name: ensure profile directory exists
+  become: yes
+  become_user: root
   file:
     path: /etc/profile.d
     state: directory
