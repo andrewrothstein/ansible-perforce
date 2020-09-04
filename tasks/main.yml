@@ -27,6 +27,7 @@
 - name: download p4v archive...
   become: yes
   become_user: root
+  when: ansible_facts['system'] == "Linux"
   get_url:
     url: '{{perforce_mirror}}/{{perforce_p4v.ver}}/{{perforce_distro}}/{{perforce_p4v.tgz}}'
     dest: /tmp/{{perforce_p4v_tgz}}
@@ -34,6 +35,7 @@
 - name: unarchive...
   become: yes
   become_user: root
+  when: ansible_facts['system'] == "Linux"
   unarchive:
     src: /tmp/{{perforce_p4v_tgz}}
     dest: '{{perforce_p4v_parent_install_dir}}'
@@ -41,10 +43,17 @@
 - name: link p4v...
   become: yes
   become_user: root
+  when: ansible_facts['system'] == "Linux"
   file:
     src: '{{perforce_p4v_install_dir}}'
     dest: '{{perforce_p4v_link_dir}}'
     state: link
+- name: ensure profile directory exists
+  become: yes
+  become_user: root
+  file:
+    path: /etc/profile.d
+    state: directory
 - name: add to the default shell path
   become: yes
   become_user: root
